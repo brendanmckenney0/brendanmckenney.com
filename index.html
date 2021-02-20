@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type"
+        content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width,
+        minimum-scale=1,initial-scale=1">
+
+    <script src=
+        "https://code.jquery.com/jquery-3.3.1.min.js">
+    </script>
+
+    <script src=
+"https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js">
+    </script>
+
+    <link rel="stylesheet" href=
+"https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
+
+    <style type="text/css">
+        .terminal,
+        span,
+        .cmd,
+        div {
+            --color: rgba(0, 128, 0, 0.99);
+        }
+
+        .terminal,
+        span {
+            --size: 1.4;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $('body').terminal({
+            help: function () {
+                this.echo('Options: help, about, projects, resume, contact');
+            },
+            founder: function () {
+                this.echo('Sandeep Jain');
+            },
+            about: function () {
+                this.echo('About Me - My name is Brendan McKenney and I am a 3rd year Computer Networking and Cybersecurity student. \n'
+                + 'I have a passion for Security and am interested in a role in DevSecOps. I am currently seeking Summer 2021 internships. \n'
+                + 'Type resume to view my experience and skills.');
+            },
+        }, {
+            greetings: 'Brendan McKenney'
+        });
+    </script>
+</body>
+
+</html>
